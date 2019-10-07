@@ -1,7 +1,7 @@
 module FitbitAPI
   class Client
     SLEEP_RESOURCES = %w(startTime timeInBed minutesAsleep awakeningsCount
-                         minutesAwake minutesToFallAsleep minutesAfterWakeup efficiency)
+                         minutesAwake minutesToFallAsleep minutesAfterWakeup efficiency stages)
 
     def sleep_logs(date=Date.today, opts={})
       get("user/#{user_id}/sleep/date/#{format_date(date)}.json", opts)
